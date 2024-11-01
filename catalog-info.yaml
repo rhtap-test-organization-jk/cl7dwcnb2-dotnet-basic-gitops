@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cl7dwcnb2-dotnet-basic-gitops
+  description: This is GitOps manifest for cl7dwcnb2-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: cl7dwcnb2-dotnet-basic
+    backstage.io/kubernetes-id: cl7dwcnb2-dotnet-basic 
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: cl7dwcnb2-dotnet-basic-gitops 
+    github.com/project-slug: rhtap-test-organization-jk/cl7dwcnb2-dotnet-basic-gitops 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:cl7dwcnb2-dotnet-basic
